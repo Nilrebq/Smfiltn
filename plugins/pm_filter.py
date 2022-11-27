@@ -88,7 +88,7 @@ async def next_page(bot, query):
     btn = btn[0:TOTAL_BUTTONS]
 
     if TUTORIAL_LINK:
-        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
+        btn.append([InlineKeyboardButton("HOW TO DOWNLOAD 🤔", url=TUTORIAL_LINK)])
 
     if 0 < offset <= 10:
         off_set = 0
@@ -668,7 +668,7 @@ async def auto_filter(client, msg, spoll=False):
     btn = btn[:TOTAL_BUTTONS]
     
     if TUTORIAL_LINK:
-        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
+        btn.append([InlineKeyboardButton("HOW TO DOWNLOAD 🤔", url=TUTORIAL_LINK)])
         
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
