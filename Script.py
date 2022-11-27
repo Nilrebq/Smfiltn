@@ -15,7 +15,7 @@ class script(object):
 
 📡 Hosted On: VPS
 
-👥 Support Group: <a href=https:/t.me/srilinks4ksupport>Support</a>"""
+👥 Support Group: <a href=https://t.me/srilinks4ksupport>Support</a>"""
     SOURCE_TXT = """<b>NOTE:</b>
 - SM18FILTERbot was not a open source project. 
 - Source - https://t.me/Srilinks4k  
