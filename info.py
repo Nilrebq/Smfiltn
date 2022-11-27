@@ -59,7 +59,10 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 BOT_MODE = environ.get('BOT_MODE', "button").lower() # button or post
 TOTAL_BUTTONS = int(environ.get('TOTAL_BUTTONS', 10))
+CUSTOM_FILE_CAPTION = """<code>{file_name} </code>
 
+<b>Share and support us ❤️ 
+〽️ Powered by @Srilinks4k"""
 SHORTENER_API = environ.get('SHORTENER_API', False)
 SHORTENER_WEBSITE = environ.get('SHORTENER_WEBSITE', False)
 
