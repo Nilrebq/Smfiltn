@@ -103,7 +103,7 @@ async def next_page(bot, query):
         btn.append([InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"🗓 {math.ceil(offset / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"), InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
 
     if TUTORIAL_LINK:
-        btn.append([InlineKeyboardButton("How to Download?", url=TUTORIAL_LINK)])
+        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
     
     with contextlib.suppress(MessageNotModified):
         delete_msg = await query.edit_message_reply_markup(
@@ -680,7 +680,7 @@ async def auto_filter(client, msg, spoll=False):
         )
 
     if TUTORIAL_LINK:
-        btn.append([InlineKeyboardButton("How to Download?", url=TUTORIAL_LINK)])
+        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
