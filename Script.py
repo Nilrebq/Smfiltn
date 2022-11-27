@@ -7,9 +7,13 @@ class script(object):
 👨‍💻 Developer: <a href=https://t.me/Belikeberlin>Berlin</a>
 
 📚 Framework: Pyrogram
+
 📝 Language: Python 
-🗂️ 𝙳ata Base: Mongodb
+
+🗂️ 𝙳ata Base: Mongodb 
+
 📡 Hosted On: VPS
+
 👥 Support Group: <a href=https:/t.me/srilinks4ksupport>Support</a>"""
     SOURCE_TXT = """<b>NOTE:</b>
 - SM18FILTERbot was not a open source project. 
