@@ -87,6 +87,9 @@ async def next_page(bot, query):
 
     btn = btn[0:TOTAL_BUTTONS]
 
+    if TUTORIAL_LINK:
+        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
+
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -102,8 +105,6 @@ async def next_page(bot, query):
     else:
         btn.append([InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"🗓 {math.ceil(offset / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"), InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
 
-    if TUTORIAL_LINK:
-        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
     
     with contextlib.suppress(MessageNotModified):
         delete_msg = await query.edit_message_reply_markup(
@@ -641,7 +642,6 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
-    print("DUlink")
     if settings["button"]:
         btn = [
             [
@@ -666,6 +666,10 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
     btn = btn[:TOTAL_BUTTONS]
+    
+    if TUTORIAL_LINK:
+        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
+        
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
@@ -679,8 +683,6 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
         )
 
-    if TUTORIAL_LINK:
-        btn.append([InlineKeyboardButton("How To Download 🤔", url=TUTORIAL_LINK)])
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
